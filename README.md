@@ -3,6 +3,12 @@
   
   [Check out the website](https://todoitems.ml/)
   
+  To run on your local machine
+  
+  - Clone this repo
+  - `npm install` to install all required dependencies
+  - `npm start` to start the local server
+  
   Login Page
   ----------
   ![](Images/Login.jpg)
