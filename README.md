@@ -1,5 +1,5 @@
 # TodoFirebse
-  An todo app connected to firebase authentication for login and signup purposes and firebase database for storing and retrieving data.
+  A todo app connected to firebase authentication for login and signup purposes and firebase database for storing and retrieving data.
   
   [Check out the website](https://todoitems.ml/)
   
