@@ -12,10 +12,14 @@ export const EmailId = React.createContext();
 function App() {
   const [authState, setAuthState] = useState(null);
   const [emailId, setEmailId] = useState("a");
+  const [reload, setReload] = useState(false)
 
   useEffect(()=>{
     firebase.auth().onAuthStateChanged(setAuthState)
     const user=firebase.auth().currentUser;
+    setTimeout(() => {
+      setReload(true)
+    }, 2000);
     if (user != null) {
         const email = user.email
         setEmailId(email);
@@ -29,7 +33,10 @@ function App() {
           <EmailId.Provider value={emailId}>
             <Header />
             <Switch>
-              <Route path="/" exact strict component={Home} />
+              {
+                  reload && <Route path="/" exact strict component={Home} />
+              }
+              
               <Route path="/login" exact strict component={Login} />
               <Route path="/signup" exact strict component={SignUp} />
             </Switch>
