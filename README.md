@@ -7,6 +7,7 @@
   
   - Clone this repo
   - `npm install` to install all required dependencies
+  - Save your firebase configurations in /src/Config/FireBase.js file
   - `npm start` to start the local server
   
   Login Page
