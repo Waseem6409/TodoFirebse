@@ -117,9 +117,8 @@ function Home() {
     firebase.firestore().collection(emailId).doc(id).delete();
     setchange(!change);
   };
-  const editModalHanlder = (e) => {
+  const editModalHanlder = (id,prev) => {
     setIsEditModelOpen(true);
-    const id = e.target.id;
     setEditId(id);
   };
 
@@ -190,8 +189,7 @@ function Home() {
                   </div>
                   <div className="buttons">
                     <button
-                      id={todo.id}
-                      onClick={editModalHanlder}
+                      onClick={()=>editModalHanlder(todo.id,todo.todo}
                       className="button"
                     >
                       Edit
@@ -236,7 +234,6 @@ function Home() {
                     </Modal>
                     <button
                       onClick={deleteHandler}
-                      id={todo.id}
                       className="button"
                     >
                       Delete
